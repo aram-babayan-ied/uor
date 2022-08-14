@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif} 
+html,body {display: grid;height: 100%;place-items: center;background: #222;}
+::selection {color: #fff; background: #007bff}
+::-webkit-scrollbar {width: 3px; border-radius: 25px} ::-webkit-scrollbar-track {background: #f1f1f1} 
+::-webkit-scrollbar-thumb {background: #ddd} 
+::-webkit-scrollbar-thumb:hover {background: #ccc}
+.wrapper {width: 370px;background: #fff;border-radius: 15px;border: 1px solid lightgrey;/* border-top: 0px; */} 
+.wrapper .title {color: #142e49;font-size: 20px;font-weight: 500;line-height: 60px;text-align: center;border-bottom: 1px solid #eee;} 
+.wrapper .form {padding: 20px 15px;min-height: 500px;max-height: 400px;overflow-y: auto;background: #f3f3f3;} 
+.wrapper .form .inbox {width: 100%;display: flex;align-items: baseline;animation: slideTop 0.3s ease} 
+.wrapper .form .user-inbox {justify-content: flex-end; margin: 13px 0} 
+.wrapper .form .inbox .msg-header {max-width: 53%; margin-left: 10px} 
+.form .inbox .msg-header p {color: #fff;background: #007bff;padding: 14px 13px;font-size: 14px;border-radius: 10px 10px 10px 0;} 
+.form .user-inbox.inbox .msg-header p {border-radius: 10px 10px 0px}
+.form .user-inbox .msg-header p {color: #333;background: #fff;} 
+.wrapper .typing-field {display: flex;height: 60px;width: 100%;align-items: center;justify-content: space-evenly;border-radius: 0 0 15px 15px} 
+.wrapper .typing-field .input-query {height: 40px; width: 335px; position: relative} 
+.wrapper .typing-field .input-query input {height: 100%; width: 100%; outline: none; border: 1px solid transparent; padding: 0 80px 0 15px; border-radius: 3px; font-size: 15px; background: #fff; transition: all 0.3s ease} 
+.typing-field .input-query input:focus {/* border-color: rgba(0,123,255,0.8); */} 
+.input-query input::placeholder {color: #999999; transition: all 0.3s ease} 
+.input-query input:focus::placeholder {color: #bfbfbf} 
+.wrapper .typing-field .input-query button {position: absolute;right: 5px;top: 50%;height: 40px;color: #fff;cursor: pointer;outline: none;background: #007bff;border: 1px solid #007bff;transform: translateY(-50%);transition: all 0.3s ease;width: 80px;border-radius: 30px;font-size: 14px} 
+.wrapper .typing-field .input-query input:valid ~ button {opacity: 1; pointer-events: auto} 
+.typing-field .input-query button:hover {background: #006fef}
+
+/* animations css */
+.lds-ellipsis {display: inline-block; position: relative; width: 90px; height: 60px; background: #eee; border-radius: 10px; text-align: center; transform: scale(0.7)}
+.lds-ellipsis div {position: absolute; top: 23px; width: 13px; height: 13px; border-radius: 50%; background: #ccc; animation-timing-function: cubic-bezier(0, 1, 1, 0); margin-left: 8px}
+.lds-ellipsis div:nth-child(1) {left: 8px; animation: lds-ellipsis1 0.6s infinite}
+.lds-ellipsis div:nth-child(2) {left: 8px; animation: lds-ellipsis2 0.6s infinite}
+.lds-ellipsis div:nth-child(3) {left: 32px; animation: lds-ellipsis2 0.6s infinite}
+.lds-ellipsis div:nth-child(4) {left: 56px; animation: lds-ellipsis3 0.6s infinite}
+
+@keyframes lds-ellipsis1 {
+  0% {transform: scale(0)}
+  100% {transform: scale(1)}
+}
+@keyframes lds-ellipsis3 {
+  0% {transform: scale(1)}
+  100% {transform: scale(0)}
+}
+@keyframes lds-ellipsis2 {
+  0% {transform: translate(0, 0)}
+  100% {transform: translate(24px, 0)}
+}
+
+@keyframes slideTop {
+    0% {margin-bottom: -25px}
+    100% {margin-bottom: 0}
+}
