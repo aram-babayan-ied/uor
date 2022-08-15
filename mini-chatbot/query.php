@@ -48,7 +48,7 @@ $queries = [
     'à plus' => 'À plus tard'
 ];
 
-function strposa(string $haystack, array $needles, int $offset = 0): mixed {
+function strposa(string $haystack, array $needles, int $offset = 0) {
     // On transforme en minuscule la requête pour mieux trouver la réponse
     $haystack = strtolower($haystack);
 

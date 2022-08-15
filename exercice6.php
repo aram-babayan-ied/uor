@@ -630,7 +630,7 @@ try {
 		                            </div>
 			                        <div class="col-md-4">
 			                            <label for="contact_email" class="form-label">E-mail</label>
-			                            <input class="form-control" type="email" id="contact_email" name="contact[email]" value="<?= $_POST['contact']['email'] ?? '' ?>"  maxlength="16">
+			                            <input class="form-control" type="email" id="contact_email" name="contact[email]" value="<?= $_POST['contact']['email'] ?? '' ?>"  maxlength="128">
 			                        </div>
 		                        </div>
 	                        </div>
@@ -642,7 +642,7 @@ try {
 			                        </div>
 			                        <div class="col-md-4">
 			                            <label for="contact_phone" class="form-label">Numéro de téléphone</label>
-			                            <input class="form-control" type="tel" id="contact_phone" name="contact[phone]" value="<?= $_POST['contact']['phone'] ?? '' ?>"  maxlength="128">
+			                            <input class="form-control" type="tel" id="contact_phone" name="contact[phone]" value="<?= $_POST['contact']['phone'] ?? '' ?>"  maxlength="16">
 			                        </div>
 	                        	</div>
 	                        </div>

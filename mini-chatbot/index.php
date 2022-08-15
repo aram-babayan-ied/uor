@@ -9,7 +9,7 @@
 
     <script>
         $(document).on('click', '#send-btn', function() {
-            message = $("#query").val();
+            var message = $("#query").val();
 
             // On rajoute le message saisi
             $('.form').append(
@@ -34,7 +34,9 @@
                     // On affiche côté client le message transmis
                     $('.loading-icon').remove();
                     $('.form').append(
-                        '<div class="bot-inbox inbox"><div class="msg-header"><p>'+ res.message +'</p></div></div>');
+                        '<div class="bot-inbox inbox"><div class="msg-header"><p>' +
+                            res.message +
+                        '</p></div></div>');
                     
                     setTimeout(function() {
                         // scroll en bas du chat une fois l'animation CSS terminée
@@ -45,7 +47,7 @@
 
         $(document).on('keyup', '#query', function(e) {
             // Envoi de la pquête lorsqu'on appuie sur Entrée dans le contexte du chat
-            if ((e.keyCode || e.which) == 13) {
+            if ((e.keyCode || e.which) === 13) {
                 $('#send-btn').trigger('click')
             }
         });
